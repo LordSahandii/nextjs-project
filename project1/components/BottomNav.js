@@ -17,7 +17,7 @@ export default function BottomNav() {
   console.log("render", { index });
 
   return (
-    <Box p={10}>
+    <Box p={10} py={20}>
       <Content index={index} />
 
       <BottomNavigation
