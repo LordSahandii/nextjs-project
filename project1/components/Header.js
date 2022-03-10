@@ -8,6 +8,7 @@ const Header = () => {
             <Center bg="teal.400" minWidth="full" rounded="md" borderTopLeftRadius={1.5} borderTopRightRadius={1.5} fontFamily="mono" >
                 Travelgram
             </Center>
+            
         </Container>
 
 

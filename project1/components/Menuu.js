@@ -1,8 +1,15 @@
-import { Container,Flex, VStack, Menu, MenuButton, Button, MenuList, MenuGroup, MenuItem, MenuDivider, HStack, Box, Spacer } from '@chakra-ui/react'
-import React from 'react'
+import { Container,Flex, VStack, Menu, MenuButton, Button, MenuList, MenuGroup, MenuItem, MenuDivider, HStack, Box, Spacer, useColorMode } from '@chakra-ui/react'
+import React, { useState } from 'react'
 import { IconButton,HamburgerIcon,AddIcon,ExternalLinkIcon,RepeatIcon, EditIcon  } from '@chakra-ui/react'
 
 const Menuu = () => {
+  const [theeme, setTheme] = useState('light');
+  const {toggleColorMode} = useColorMode();
+  const s = (e) =>{
+    e.preventDefault();
+    setTheme(theeme=='light' ? 'dark' : 'light');
+  }
+  
   return (
     <Box p={7} h={0} w="full" position="fixed">
   <Flex >
@@ -31,7 +38,9 @@ const Menuu = () => {
   
     <Spacer />
     
+    
     <Spacer />
+    <Button rounded={10} onClick={(e)=>{ toggleColorMode(); s(e)}}>{theeme}</Button>
       <Menu>
         <MenuButton as={Button} colorScheme='pink'>
           Profile
