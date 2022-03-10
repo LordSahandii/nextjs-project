@@ -2,6 +2,10 @@ import '../styles/globals.css'
 import {ChakraProvider} from "@chakra-ui/react"
 import { extendTheme } from '@chakra-ui/react'
 import Head from 'next/head'
+import { BottomNavigationStyleConfig as BottomNavigation } from 'chakra-ui-bottom-navigation';
+import Header from '../components/Header';
+import BottomNav from '../components/BottomNav';
+
 
 // 2. Extend the theme to include custom colors, fonts, etc
 const colors = {
@@ -12,7 +16,12 @@ const colors = {
   },
 }
 
-const theme = extendTheme({ colors })
+const theme = extendTheme({
+   colors,
+   components: {
+     BottomNavigation,
+   }
+ })
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -22,7 +31,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header/>
       <Component {...pageProps} />
+      
     </ChakraProvider>
   )
 }
