@@ -1,3 +1,8 @@
+import { Image, Box } from "@chakra-ui/react"
 export default function Custom404() {
-    return <h1>404 - Page Not Found</h1>
+    return (
+      <Box minW="100%" maxH="100%">
+        <Image src="/err.jpeg" minW="100%" maxH="100%"></Image>
+      </Box>
+    )
   }
