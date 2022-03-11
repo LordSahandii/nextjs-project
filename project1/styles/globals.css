@@ -14,3 +14,16 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.bgimg-1 {
+  background-image: url(../public/err.jpeg);
+  height: 100%;
+  
+}
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position:relative;
+  /* opacity: 0.65; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}

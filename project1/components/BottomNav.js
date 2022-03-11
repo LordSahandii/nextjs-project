@@ -25,9 +25,10 @@ export default function BottomNav() {
         onChange={(newIndex) => {
           setIndex(newIndex);
         }}
-        colorScheme="green"
+        colorScheme="cyan"
         variant="float"
         showLabel="if-active"
+        borderRadius={20}
       >
         <BottomNavigationItem>
           <BottomNavigationIcon as={AddIcon} />

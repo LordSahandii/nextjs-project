@@ -1,8 +1,8 @@
-import { Image, Box } from "@chakra-ui/react"
+import { Image, Box, Container } from "@chakra-ui/react"
 export default function Custom404() {
     return (
-      <Box minW="100%" maxH="100%">
-        <Image src="/err.jpeg" minW="100%" maxH="100%"></Image>
-      </Box>
+        <Container maxH="container.xxl" maxW="container.xxl"  minH="container.sm" p={0}>
+      <Image src="/err.jpeg" minH="container.sm"></Image>
+      </Container>
     )
   }
