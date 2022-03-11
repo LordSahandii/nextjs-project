@@ -5,6 +5,8 @@ import Head from 'next/head'
 import { BottomNavigationStyleConfig as BottomNavigation } from 'chakra-ui-bottom-navigation';
 import Header from '../components/Header';
 import BottomNav from '../components/BottomNav';
+import '@fontsource/raleway/400.css'
+import '@fontsource/open-sans/700.css'
 
 
 // 2. Extend the theme to include custom colors, fonts, etc
@@ -17,6 +19,10 @@ const colors = {
 }
 
 const theme = extendTheme({
+    fonts: {
+    heading: 'Open Sans, sans-serif',
+    body: 'Raleway, sans-serif',
+    },
    colors,
    components: {
      BottomNavigation,

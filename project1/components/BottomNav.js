@@ -1,6 +1,6 @@
 import { Box, ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { AddIcon, BellIcon, EditIcon, ChatIcon } from "@chakra-ui/icons";
-import * as React from "react";
+import {useState} from "react";
 import { render } from "react-dom";
 import {
   BottomNavigation,
@@ -16,13 +16,13 @@ import {GiCommercialAirplane} from 'react-icons/gi'
 
 
 export default function BottomNav() {
-  const [index, setIndex] = React.useState("value");
+  const [index, setIndex] = useState("value");
 
   console.log("render", { index });
 
   return (
     <Box p={10} py={20}>
-      <Content index={index} />
+      <Content children={index} />
 
       <BottomNavigation
         value={index}
@@ -35,7 +35,7 @@ export default function BottomNav() {
         borderRadius={20}
         
       >
-        <BottomNavigationItem>
+        <BottomNavigationItem >
           <BottomNavigationIcon as={GiCommercialAirplane} />
           <BottomNavigationLabel>Label 1</BottomNavigationLabel>
         </BottomNavigationItem>
@@ -43,7 +43,7 @@ export default function BottomNav() {
           <BottomNavigationIcon as={MdHome}/>
           <BottomNavigationLabel>Label 2</BottomNavigationLabel>
         </BottomNavigationItem>
-        <BottomNavigationItem>
+        <BottomNavigationItem >
           <BottomNavigationIcon as={ChatIcon} />
           <BottomNavigationLabel>Label 3</BottomNavigationLabel>
         </BottomNavigationItem>

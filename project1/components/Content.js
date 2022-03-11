@@ -1,13 +1,16 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Container, Heading, Text } from "@chakra-ui/react";
 import * as React from "react";
+import Footer from "./Footer";
+import Header from "./Header";
 
 export function Content({ children }) {
   return (
-    <Box>
+    <Container>
       {children === 0 && (
         <>
           <Heading>Item 1</Heading>
           <Text>Content of a first item</Text>
+          <Footer></Footer>
         </>
       )}
       {children === "value" && (
@@ -22,6 +25,6 @@ export function Content({ children }) {
           <Text>Content of a 3rd item</Text>
         </>
       )}
-    </Box>
+    </Container>
   );
 }

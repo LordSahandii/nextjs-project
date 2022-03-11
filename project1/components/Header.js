@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ReactNode } from 'react';
 import {
     IconButton,
@@ -21,9 +21,16 @@ import {
   } from '@chakra-ui/react';
 import { MoonIcon, SunIcon, AddIcon,ExternalLinkIcon,RepeatIcon, EditIcon, HamburgerIcon,  } from '@chakra-ui/icons';
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 const Header = () => {
+    const [log, setLog] = useState('Logout'?'Login':'Logout');
     const { colorMode, toggleColorMode } = useColorMode();
+    const router = useRouter()
+    const handleClick = (e) => {
+        e.preventDefault()
+        router.push("/Map")
+      }
   return (
         <>
             <Box bg="teal.400" px={4} borderBottomLeftRadius={11} borderBottomRightRadius={11}>
@@ -54,7 +61,7 @@ const Header = () => {
                     </Menu>
                     
                 
-                    <Box>Travelgram</Box>
+                    <Box fontFamily="cursive" fontWeight="bold" fontSize="2xl">Travelgram</Box>
 
                     <Flex>
                         <Stack direction={'row'} spacing={3}>
@@ -62,36 +69,36 @@ const Header = () => {
                             {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                         </Button>
                         <Menu>
-                <MenuButton
-                  as={Button}
-                  rounded={'full'}
-                  variant={'link'}
-                  cursor={'pointer'}
-                  minW={0}>
-                  <Avatar
-                    size={'sm'}
-                    src={'https://avatars.dicebear.com/api/bottts/wqeqqe.svg'}
-                  />
-                </MenuButton>
-                <MenuList alignItems={'center'}>
-                  <br />
-                  <Center>
-                    <Avatar
-                      size={'2xl'}
-                      src={'https://avatars.dicebear.com/api/bottts/wqeqqe.svg'}
-                    />
-                  </Center>
-                  <br />
-                  <Center>
-                    <p>Username</p>
-                  </Center>
-                  <br />
-                  <MenuDivider />
-                  <MenuItem>Your Servers</MenuItem>
-                  <MenuItem>Account Settings</MenuItem>
-                  <MenuItem>Logout</MenuItem>
-                </MenuList>
-              </Menu>
+                            <MenuButton
+                            as={Button}
+                            rounded={'full'}
+                            variant={'link'}
+                            cursor={'pointer'}
+                            minW={0}>
+                            <Avatar
+                                size={'sm'}
+                                src={'https://avatars.dicebear.com/api/bottts/wqeqqe.svg'}
+                            />
+                            </MenuButton>
+                            <MenuList alignItems={'center'}>
+                            <br />
+                            <Center>
+                                <Avatar
+                                size={'2xl'}
+                                src={'https://avatars.dicebear.com/api/bottts/wqeqqe.svg'}
+                                />
+                            </Center>
+                            <br />
+                            <Center>
+                                <p>Username</p>
+                            </Center>
+                            <br />
+                            <MenuDivider />
+                            <MenuItem onClick={handleClick}>View Profile</MenuItem>
+                            <MenuItem>Account Settings</MenuItem>
+                            <MenuItem onClick={(e)=>{e.preventDefault() ;alert("Logged out successfully"); setLog(log==='Logout'?'Login':'Logout')}}>{log==='Logout'?'Login':'Logout'}</MenuItem>
+                            </MenuList>
+                        </Menu>
                         </Stack>
                     </Flex>
                     
