@@ -70,6 +70,8 @@ const Stay = () => {
                 <Button as={AddIcon} variant='ghost' size="xxs" onClick={()=>{setRoom(room+1)}}></Button>
             
                 </Grid>
+                <MenuDivider></MenuDivider>
+                <Button color={"#1A736A"} onClick={()=>{setI(j+k)}}>Done</Button>
                 
             </MenuList>
             </Menu>
