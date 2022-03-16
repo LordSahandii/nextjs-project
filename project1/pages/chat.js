@@ -2,13 +2,15 @@ import { Stack, Flex, Button, Avatar, StackDivider, Box, Text, Container, HStack
 import { ArrowBackIcon } from '@chakra-ui/icons'
 import {FiSend} from "react-icons/fi"
 import React from 'react'
+import { useRouter } from 'next/router'
 
 const Chat = () => {
+  const route = useRouter();
   return (
     <Container p={5} maxW={"container.lg"}>
         <Stack divider={<StackDivider borderColor={"gray.200"}></StackDivider>}>
         <Box display="flex" justifyContent="space-between"> 
-          <Button as={ArrowBackIcon} variant="ghost" ></Button>
+          <Button as={ArrowBackIcon} variant="ghost" onClick={()=>{route.push("/")}} ></Button>
           <Avatar
             size={'md'}
             src={

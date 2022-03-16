@@ -6,14 +6,14 @@ import Map from "../pages/map";
 import HomeContents from "./HomeContents/HomeContents";
 import Profile from "../pages/profile";
 import ChatBox from "./ChatBoxContents/ChatBox";
+import OnSale from "./TravelContents/OnSale";
 
 export function Content({ children }) {
   return (
     <Container p={0} maxW="container.xxl" >
       {children === 0 && (
         <>
-          <Heading>Item 1</Heading>
-          <Text>Content of a first item</Text>
+          <OnSale></OnSale>
           
         </>
       )}

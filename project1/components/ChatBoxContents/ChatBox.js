@@ -19,18 +19,12 @@ import {
   } from '@chakra-ui/react';
   import {ArrowRightIcon, ArrowBackIcon} from "@chakra-ui/icons"
 import { useState } from 'react';
+import { route } from 'next/dist/server/router';
+import { useRouter } from 'next/router';
   
   export default function ChatBox() {
-      const [isvisible, setVisible] = useState("visible");
-      const HandleClick = (e) => {
-        e.preventDefault();
-          let vis = document.getElementById('user').value;
-          if(vis == "Maria Fibbo"){
-            setVisible("visible")
-          } else{
-            setVisible("hidden")
-          }
-      }
+      const route = useRouter();
+      
     return (
       
             <VStack spacing={10}>
@@ -43,7 +37,7 @@ import { useState } from 'react';
                         <Button colorScheme="teal">Create</Button>
                         <Button colorScheme="teal">Join</Button>
                 </HStack>   
-      <HStack py={6} visibility={isvisible} >
+      <HStack py={6}>
         <Box
           maxW={'600px'}
           maxH={"300px"}
@@ -96,7 +90,9 @@ import { useState } from 'react';
               }}
               _focus={{
                 bg: 'blue.500',
-              }}>
+              }}
+              onClick={()=>{route.push("/chat")}}
+              >
               Message
             </Button>
             </Stack>
