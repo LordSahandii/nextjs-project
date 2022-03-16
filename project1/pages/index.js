@@ -11,10 +11,10 @@ export default function Home() {
     <>
     
     <Container maxW="container.xxl" p={0}>
-      <Header/>
-    <BottomNav/>
+        <Header/>
+        <BottomNav/>
       
-      </Container>
+    </Container>
       </>
   )
 }

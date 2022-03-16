@@ -1,28 +1,38 @@
 import { Box, Container, Heading, Text } from "@chakra-ui/react";
-import * as React from "react";
+import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
+import Map from "../pages/map";
+import HomeContents from "./HomeContents/HomeContents";
+import Profile from "../pages/profile";
+import ChatBox from "./ChatBoxContents/ChatBox";
 
 export function Content({ children }) {
   return (
-    <Container>
+    <Container p={0} maxW="container.xxl" >
       {children === 0 && (
         <>
           <Heading>Item 1</Heading>
           <Text>Content of a first item</Text>
-          <Footer></Footer>
+          
         </>
       )}
       {children === "value" && (
         <>
-          <Heading>Item 2</Heading>
-          <Text>Content of a 2nd item</Text>
+          <HomeContents></HomeContents>
+          
         </>
       )}
       {children === 2 && (
         <>
-          <Heading>Item 3</Heading>
-          <Text>Content of a 3rd item</Text>
+          <ChatBox/>
+        </>
+      )}
+      {children === 3 && (
+        <>
+        
+          <Profile></Profile>
+          
         </>
       )}
     </Container>

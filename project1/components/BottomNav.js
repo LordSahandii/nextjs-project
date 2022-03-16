@@ -1,5 +1,5 @@
 import { Box, ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { AddIcon, BellIcon, EditIcon, ChatIcon } from "@chakra-ui/icons";
+import { AddIcon, BellIcon, EditIcon, ChatIcon, Search2Icon } from "@chakra-ui/icons";
 import {useState} from "react";
 import { render } from "react-dom";
 import {
@@ -37,16 +37,22 @@ export default function BottomNav() {
       >
         <BottomNavigationItem >
           <BottomNavigationIcon as={GiCommercialAirplane} />
-          <BottomNavigationLabel>Label 1</BottomNavigationLabel>
+          <BottomNavigationLabel></BottomNavigationLabel>
         </BottomNavigationItem>
         <BottomNavigationItem value="value">
           <BottomNavigationIcon as={MdHome}/>
-          <BottomNavigationLabel>Label 2</BottomNavigationLabel>
+          <BottomNavigationLabel></BottomNavigationLabel>
         </BottomNavigationItem>
         <BottomNavigationItem >
           <BottomNavigationIcon as={ChatIcon} />
-          <BottomNavigationLabel>Label 3</BottomNavigationLabel>
+          <BottomNavigationLabel></BottomNavigationLabel>
         </BottomNavigationItem>
+        <BottomNavigationItem >
+          <BottomNavigationIcon as={Search2Icon} />
+          <BottomNavigationLabel></BottomNavigationLabel>
+        </BottomNavigationItem>
+        
+        
       </BottomNavigation>
     </Box>
   );

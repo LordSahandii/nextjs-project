@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ReactNode } from 'react';
 import {
+    
     IconButton,
     Box,
     Flex,
@@ -19,7 +20,10 @@ import {
     Center,
     Spacer,
   } from '@chakra-ui/react';
-import { MoonIcon, SunIcon, AddIcon,ExternalLinkIcon,RepeatIcon, EditIcon, HamburgerIcon,  } from '@chakra-ui/icons';
+import { MoonIcon, SunIcon, AddIcon,ExternalLinkIcon,RepeatIcon, EditIcon, HamburgerIcon, Search2Icon, CalendarIcon } from '@chakra-ui/icons';
+import {FaMapMarkedAlt} from "react-icons/fa"
+import {AiFillCar} from "react-icons/ai"
+
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -29,11 +33,12 @@ const Header = () => {
     const router = useRouter()
     const handleClick = (e) => {
         e.preventDefault()
+        
         router.push("/Map")
       }
   return (
         <>
-            <Box bg="teal.400" px={4} borderBottomLeftRadius={11} borderBottomRightRadius={11}>
+            <Box bg="teal.400" px={4} borderBottomLeftRadius={11} borderBottomRightRadius={11} position="absolute" width={"full"}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
                     
                     <Menu>
@@ -43,20 +48,22 @@ const Header = () => {
                             icon={<HamburgerIcon></HamburgerIcon>}
                             variant='outline'
                             borderColor="teal.400"
+                            
                         />
                         <MenuList bg="#60B5AC">
-                            <MenuItem icon={<AddIcon/> } command='⌘T'>
-                            New Tab
+                            <MenuItem icon={<CalendarIcon/> } onClick={()=>{router.push("/notbook")}} >
+                            Notebook
                             </MenuItem>
-                            <MenuItem icon={<ExternalLinkIcon></ExternalLinkIcon>} command='⌘N'>
-                            New Window
+                            <MenuItem icon={<FaMapMarkedAlt></FaMapMarkedAlt>} onClick={handleClick}>
+                            Map
                             </MenuItem>
-                            <MenuItem icon={<RepeatIcon/> } command='⌘⇧N'>
-                            Open Closed Tab
+                            <MenuItem icon={<AiFillCar/> } onClick={()=>{router.push("/rent")}}>
+                            Rent
                             </MenuItem>
-                            <MenuItem icon={<EditIcon></EditIcon> } command='⌘O'>
-                            Open File...
+                            <MenuItem icon={<EditIcon></EditIcon> } onClick={()=>{router.push("/aboutUs")}}>
+                            About Us
                             </MenuItem>
+                            
                         </MenuList>
                     </Menu>
                     
@@ -94,8 +101,8 @@ const Header = () => {
                             </Center>
                             <br />
                             <MenuDivider />
-                            <MenuItem onClick={handleClick}>View Profile</MenuItem>
-                            <MenuItem>Account Settings</MenuItem>
+                            <MenuItem onClick={()=>{router.push("/myprofile")}}>View Profile</MenuItem>
+                            <MenuItem onClick={()=>{router.push("/settings")}}>Account Settings</MenuItem>
                             <MenuItem onClick={(e)=>{e.preventDefault() ;alert("Logged out successfully"); setLog(log==='Logout'?'Login':'Logout')}}>{log==='Logout'?'Login':'Logout'}</MenuItem>
                             </MenuList>
                         </Menu>
