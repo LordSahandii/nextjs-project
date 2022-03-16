@@ -21,7 +21,7 @@ export default function BottomNav() {
   console.log("render", { index });
 
   return (
-    <Box p={10} py={20}>
+    <Box p={10} py={20} >
       <Content children={index} />
 
       <BottomNavigation
@@ -33,6 +33,7 @@ export default function BottomNav() {
         variant="float"
         showLabel="if-active"
         borderRadius={20}
+        
         
       >
         <BottomNavigationItem >

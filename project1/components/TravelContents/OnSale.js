@@ -16,7 +16,7 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  SimpleGrid, Flex
+  SimpleGrid, Flex, Image
 } from '@chakra-ui/react';
 import { FaCheckCircle } from 'react-icons/fa';
 import {ArrowBackIcon} from "@chakra-ui/icons"
@@ -25,6 +25,10 @@ import ThingsToDo from './ThingsToDo';
 import Stay from './Stay';
 import Airplane from './Airplane';
 import Cruise from './Cruise';
+import {FaWpexplorer} from "react-icons/fa"
+import {MdFlight, MdCardTravel} from 'react-icons/md'
+import {RiShip2Line} from "react-icons/ri"
+
 
 function PriceWrapper({ children }) {
   return (
@@ -78,10 +82,10 @@ export default function OnSale() {
     <VStack w="full" h="full" spacing={10}> 
     <Stack spacing={7}>
         <Flex justifyContent={"space-evenly"}>
-            <Button onClick={()=>{setIndex(0)}}></Button>
-            <Button onClick={()=>{setIndex("value")}}></Button>
-            <Button onClick={()=>{setIndex(2)}}></Button>
-            <Button onClick={()=>{setIndex(3)}}></Button>
+            <Button as={FaWpexplorer} variant="ghost" onClick={()=>{setIndex(0)}}></Button>
+            <Button as={MdCardTravel} variant="ghost" onClick={()=>{setIndex("value")}}></Button>
+            <Button as={MdFlight} variant="ghost" onClick={()=>{setIndex(2)}}></Button>
+            <Button as={RiShip2Line} variant="ghost" onClick={()=>{setIndex(3)}}></Button>
         </Flex>
 
         <ContentTravel children={index}></ContentTravel>
@@ -126,21 +130,12 @@ export default function OnSale() {
             borderBottomRadius={'xl'}>
             <List spacing={3} textAlign="start" px={12}>
               <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                unlimited build minutes
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
+                  <Image src='/Cancun.webp'></Image>
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
               <Button w="full" colorScheme="red" variant="outline">
-                Start trial
+                Book Now
               </Button>
             </Box>
           </VStack>
@@ -186,26 +181,9 @@ export default function OnSale() {
               py={4}
               borderBottomRadius={'xl'}>
               <List spacing={3} textAlign="start" px={12}>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  unlimited build minutes
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={FaCheckCircle} color="green.500" />
-                  5TB Lorem, ipsum dolor.
-                </ListItem>
+              <ListItem>
+                  <Image src='/Santorini.jpeg'></Image>
+              </ListItem>
               </List>
               <Box w="80%" pt={7}>
                 <Button w="full" colorScheme="red">
@@ -237,17 +215,8 @@ export default function OnSale() {
             py={4}
             borderBottomRadius={'xl'}>
             <List spacing={3} textAlign="start" px={12}>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                unlimited build minutes
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
+            <ListItem>
+                  <Image src='/Paris.jpeg'></Image>
               </ListItem>
             </List>
             <Box w="80%" pt={7}>

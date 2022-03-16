@@ -40,26 +40,34 @@ export default function HomePageCarousel() {
   // This can be static or loaded from a server
   const cards = [
     {
-      title: 'Design Projects 1',
+      title: '',
       text:
-        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+        "",
       image:
-        'https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+      
+        'https://cdn.kimkim.com/files/a/images/ceb6c1ccfc1da56c233f4987e4ac58066d01bf36/big-570d6dbcc2255abf5a85e1d9ee4b3731.jpg',
     },
     {
-      title: 'Design Projects 2',
+      title: '',
       text:
-        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+        "",
       image:
-        'https://images.unsplash.com/photo-1438183972690-6d4658e3290e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2274&q=80',
+      
+        'https://livability.com/wp-content/uploads/2018/05/PortlandME-LighthouseDusk.jpg',
     },
     {
-      title: 'Design Projects 3',
+      title: '',
       text:
-        "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
+        "",
       image:
-        'https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
-    },
+        'https://content.thriveglobal.com/wp-content/uploads/2020/06/summer.jpg',
+    },{
+        title: '',
+        text:
+          "",
+        image:
+          'https://files.tripstodiscover.com/files/2015/10/Kyoto-Japan.jpg',
+      },
   ];
 
   return (
@@ -109,7 +117,8 @@ export default function HomePageCarousel() {
         {cards.map((card, index) => (
           <Box
             key={index}
-            height={'6xl'}
+            height={'full'}
+            width="full"
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
@@ -120,16 +129,15 @@ export default function HomePageCarousel() {
               <Stack
                 spacing={6}
                 w={'full'}
-                maxW={'lg'}
+                maxW={'xl'}
                 position="absolute"
-                top="50%"
-                transform="translate(0, -50%)">
-                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                top="20%"
+                left={"32%"}
+                transform="translate(0, -100%)">
+                <Heading fontSize={{ base: '4xl', md: '5xl', lg: '6xl' }} fontWeight="hairline">
                   {card.title}
                 </Heading>
-                <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
-                  {card.text}
-                </Text>
+                
               </Stack>
             </Container>
           </Box>
