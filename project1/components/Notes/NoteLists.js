@@ -14,7 +14,7 @@ function NoteLists({ todos, deleteTodo }) {
   if (!todos.length) {
     return (
       <Badge colorScheme='green' p='4' m='4' borderRadius='lg'>
-        No Todos, yay!!!
+        Your list is empty!
       </Badge>
     );
   }

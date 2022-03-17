@@ -103,7 +103,7 @@ import { useRouter } from 'next/router';
             </Badge>
           </Stack>
   
-          <Stack mt={8} direction={'row'} spacing={4} position="relative" overflowX="scroll">
+          <Stack mt={8} direction={'row'} spacing={4} position="relative" overflowX= "scroll">
             <Image src="/Hawaii.webp">
             </Image>
             <Image src="/Mexico.jpeg">

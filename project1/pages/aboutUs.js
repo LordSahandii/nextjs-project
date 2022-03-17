@@ -10,6 +10,7 @@ import {
     SimpleGrid,
     useColorModeValue,
   } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
   
   
   const testimonials = [
@@ -128,6 +129,7 @@ import {
   }
   
   export default function GridBlurredBackdrop() {
+    const route = useRouter();
     return (
       <Flex
         textAlign={'center'}
@@ -135,7 +137,7 @@ import {
         justifyContent={'center'}
         direction={'column'}
         width={'full'}>
-        <Button as={ArrowBackIcon} variant="ghost"></Button>
+        <Button as={ArrowBackIcon} variant="ghost" onClick={()=>{route.push("/")}}></Button>
         <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
           <chakra.h3
             fontFamily={'Work Sans'}

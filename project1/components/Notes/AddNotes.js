@@ -1,5 +1,5 @@
 import { Button, HStack, Input, useToast } from '@chakra-ui/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
 
 function AddNotes({ addTodo }) {
@@ -21,24 +21,25 @@ function AddNotes({ addTodo }) {
       id: nanoid(),
       body: content,
     };
-
+    localStorage.setItem('notes',todo);
     addTodo(todo);
     setContent('');
   }
 
   const [content, setContent] = useState('');
 
+
   return (
     <form onSubmit={handleSubmit}>
       <HStack mt='8'>
         <Input
           variant='filled'
-          placeholder='learning chakraui with todo app'
+          placeholder='Type your needs'
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
-        <Button colorScheme='pink' px='8' type='submit'>
-          Add Todo
+        <Button colorScheme='teal' px='8' type='submit'>
+          Add
         </Button>
       </HStack>
     </form>

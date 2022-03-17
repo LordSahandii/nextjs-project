@@ -51,10 +51,7 @@ const notbook = () => {
                     <Heading>Notebook</Heading>
                 </VStack>
 
-                <VStack justifyContent="flex-end" spacing={5}>
-                    <Input placeholder='Add your needs' size="md" variant="filled" id='noteInputs'></Input>
-                    <Button as={AddIcon} variant="ghost"></Button>
-                </VStack>
+            
                 <NoteLists todos={notes} deleteTodo={deleteNote} />
                 <AddNotes addTodo={addNote} />
                 

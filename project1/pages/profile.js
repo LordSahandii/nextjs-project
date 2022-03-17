@@ -21,7 +21,7 @@ import {
 import { useState } from 'react';
   
   export default function Profile() {
-      const [isvisible, setVisible] = useState("visible");
+      const [isvisible, setVisible] = useState("hidden");
       const HandleClick = (e) => {
         e.preventDefault();
           let vis = document.getElementById('user').value;
