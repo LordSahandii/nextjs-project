@@ -6,6 +6,7 @@ function AddNotes({ addTodo }) {
   const toast = useToast();
 
   function handleSubmit(e) {
+
     e.preventDefault();
     if (!content) {
       toast({
@@ -21,7 +22,7 @@ function AddNotes({ addTodo }) {
       id: nanoid(),
       body: content,
     };
-    localStorage.setItem('notes',todo);
+    localStorage.setItem('notes',JSON.stringify(todo));
     addTodo(todo);
     setContent('');
   }
@@ -30,7 +31,7 @@ function AddNotes({ addTodo }) {
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={(e) => {handleSubmit(e)}}>
       <HStack mt='8'>
         <Input
           variant='filled'

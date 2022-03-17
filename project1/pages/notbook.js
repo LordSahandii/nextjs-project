@@ -9,7 +9,7 @@ import { localStorageManager } from '@chakra-ui/react'
 import NoteLists from '../components/Notes/NoteLists'
 
 
-const notbook = () => {
+const Notbook = () => {
     const router = useRouter();
     
     
@@ -64,4 +64,4 @@ const notbook = () => {
   )
 }
 
-export default notbook
+export default Notbook
