@@ -38,7 +38,9 @@ function PriceWrapper({ children }) {
       borderWidth="1px"
       alignSelf={{ base: 'center', lg: 'flex-start' }}
       borderColor={useColorModeValue('gray.200', 'gray.500')}
-      borderRadius={'xl'}>
+      borderRadius={'xl'}
+      w="70%"
+      >
       {children}
     </Box>
   );
@@ -134,7 +136,7 @@ export default function OnSale() {
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
+              <Button w="full" colorScheme="teal" variant="outline">
                 Book Now
               </Button>
             </Box>
@@ -150,7 +152,7 @@ export default function OnSale() {
               style={{ transform: 'translate(-50%)' }}>
               <Text
                 textTransform="uppercase"
-                bg={useColorModeValue('red.300', 'red.700')}
+                bg={useColorModeValue('teal.300', 'teal.700')}
                 px={3}
                 py={1}
                 color={useColorModeValue('gray.900', 'gray.300')}
@@ -186,14 +188,14 @@ export default function OnSale() {
               </ListItem>
               </List>
               <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="red">
-                  Start trial
+                <Button w="full" colorScheme="teal">
+                  Book Now
                 </Button>
               </Box>
             </VStack>
           </Box>
         </PriceWrapper>
-        <PriceWrapper>
+        <PriceWrapper >
           <Box py={4} px={12}>
             <Text fontWeight="500" fontSize="2xl">
               Scale
@@ -213,10 +215,11 @@ export default function OnSale() {
           <VStack
             bg={useColorModeValue('gray.50', 'gray.700')}
             py={4}
-            borderBottomRadius={'xl'}>
+            borderBottomRadius={'xl'}
+            >
             <List spacing={3} textAlign="start" px={12}>
             <ListItem>
-                  <Image src='/Paris.jpeg'></Image>
+                  <Image src='/Paris.jpeg' ></Image>
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
