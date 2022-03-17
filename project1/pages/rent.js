@@ -13,7 +13,7 @@ const rent = () => {
             <VStack p={5}>
             <HStack spacing={4} flexDirection="row" display="flex" position="fixed">
                     <Stack alignItems="flex-start" justifyContent="flex-start" alignSelf="flex-start"> 
-                    <Button as={ArrowBackIcon} onClick={()=>{router.push("/")}} variant="ghost"></Button>
+                    <Button as={ArrowBackIcon} onClick={()=>{route.push("/")}} variant="ghost"></Button>
                     </Stack>
                     <Stack alignItems="center" justifyContent="center" alignSelf="center">
                         <Heading>Rent</Heading>

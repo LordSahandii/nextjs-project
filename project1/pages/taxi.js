@@ -18,7 +18,7 @@ const taxi = () => {
           p={6}
           textAlign={'center'}
           >
-            <Button as={ArrowBackIcon} variant="ghost" onClick={()=>{route.push("/")}}/>
+            <Button as={ArrowBackIcon} variant="ghost" onClick={()=>{route.push("/rent")}}/>
       
             <Heading>
               Get a Taxi 
