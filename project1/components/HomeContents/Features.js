@@ -1,6 +1,6 @@
-import { ReactElement } from 'react';
+import React from 'react';
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react';
-import { FcAssistant, FcDonate, FcInTransit,FcGraduationCap,FcDebt,FcGlobe } from 'react-icons/fc';
+import {FcGraduationCap,FcDebt,FcGlobe } from 'react-icons/fc';
 
 
 

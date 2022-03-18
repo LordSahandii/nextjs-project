@@ -1,4 +1,4 @@
-import { Stack, Flex, Button, Avatar, StackDivider, Box, Text, Container, HStack, Heading, InputGroup, Input, InputLeftElement, InputRightAddon } from '@chakra-ui/react'
+import { Stack, Flex, Button, Avatar, StackDivider, Box, Text, Container, HStack, Heading, InputGroup, Input, InputRightAddon } from '@chakra-ui/react'
 import { ArrowBackIcon } from '@chakra-ui/icons'
 import {FiSend} from "react-icons/fi"
 import React from 'react'

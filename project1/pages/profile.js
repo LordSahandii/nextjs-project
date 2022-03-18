@@ -202,21 +202,21 @@ import { useState } from 'react';
               py={1}
               bg={useColorModeValue('gray.50', 'gray.800')}
               fontWeight={'400'}>
-              200 Followers
+              50 Followers
             </Badge>
             <Badge
               px={2}
               py={1}
               bg={useColorModeValue('gray.50', 'gray.800')}
               fontWeight={'400'}>
-              155 Followings
+              55 Followings
             </Badge>
             <Badge
               px={2}
               py={1}
               bg={useColorModeValue('gray.50', 'gray.800')}
               fontWeight={'400'}>
-              2 posts
+              6 posts
             </Badge>
           </Stack>
   

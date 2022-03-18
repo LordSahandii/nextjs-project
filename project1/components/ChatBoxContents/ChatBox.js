@@ -2,24 +2,12 @@ import {
     Heading,
     Avatar,
     Box,
-    Center,
     Text,
     Stack,
     Button,
-    Link,
-    Badge,
-    useColorModeValue,
-    Container,
     VStack,
-    Input,
-    InputGroup,
-    InputRightAddon,
-    InputRightElement,
-    HStack, Flex, Hstack
+    HStack,
   } from '@chakra-ui/react';
-  import {ArrowRightIcon, ArrowBackIcon} from "@chakra-ui/icons"
-import { useState } from 'react';
-import { route } from 'next/dist/server/router';
 import { useRouter } from 'next/router';
   
   export default function ChatBox() {

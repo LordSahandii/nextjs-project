@@ -1,4 +1,4 @@
-import { Container, Box, Button, Image, useColorModeValue, Stack, Heading,Text, HStack, InputGroup, InputLeftElement, Input, SimpleGrid } from '@chakra-ui/react'
+import { Container, Button, useColorModeValue, Stack, Heading,Text, HStack, InputGroup, InputLeftElement, Input, SimpleGrid } from '@chakra-ui/react'
 import {ArrowBackIcon} from "@chakra-ui/icons"
 import {BiMap} from "react-icons/bi"
 import React from 'react'

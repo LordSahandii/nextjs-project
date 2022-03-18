@@ -6,19 +6,14 @@ import {
     Text,
     Stack,
     Button,
-    Link,
     Badge,
     useColorModeValue,
     Container,
     VStack,
-    Input,
-    InputGroup,
-    InputRightAddon,
-    InputRightElement,
+
     HStack,Image
   } from '@chakra-ui/react';
-  import {ArrowRightIcon, ArrowBackIcon} from "@chakra-ui/icons"
-import { useState } from 'react';
+  import { ArrowBackIcon} from "@chakra-ui/icons"
 import { useRouter } from 'next/router';
   
   export default function myprofile() {
@@ -35,7 +30,7 @@ import { useRouter } from 'next/router';
                    
       <Center py={6} >
         <Box
-          maxW={'320px'}
+          maxW={{base:'320px', md:"400px",lg: "750px"}}
           w={'full'}
           bg={useColorModeValue('white', 'gray.900')}
           boxShadow={'2xl'}
@@ -100,10 +95,10 @@ import { useRouter } from 'next/router';
             </Badge>
           </Stack>
   
-          <Stack mt={8} direction={'row'} spacing={4} position="relative" overflowX= "scroll">
+          <Stack mt={8} direction={{base:'row',lg:"column"}} spacing={4} position="relative" overflowX= "scroll">
             <Image src="/Hawaii.webp">
             </Image>
-            <Image src="/Mexico.jpeg">
+            <Image src="/Mexico.jpeg" >
             </Image>
           </Stack>
         </Box>

@@ -1,5 +1,4 @@
-import { Box, Button, Heading, VStack, Text, Flex } from '@chakra-ui/react'
-import {ArrowBackIcon} from "@chakra-ui/icons"
+import { Box, Button, Heading, VStack, Text } from '@chakra-ui/react'
 import React from 'react'
 import { useRouter } from 'next/router'
 import HomePageCarousel from './HomePageCarousel'

@@ -3,9 +3,7 @@ import { Container, Button, Text, Heading, VStack, Flex, Input  } from '@chakra-
 import { AddIcon, ArrowBackIcon } from '@chakra-ui/icons'
 import { useEffect, useState } from 'react'
 import AddNotes from '../components/Notes/AddNotes'
-import { Router, useRouter } from 'next/router'
-import Document from 'next/document'
-import { localStorageManager } from '@chakra-ui/react'
+import { useRouter } from 'next/router'
 import NoteLists from '../components/Notes/NoteLists'
 
 

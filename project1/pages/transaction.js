@@ -2,7 +2,6 @@ import React from 'react'
 import {ArrowBackIcon} from "@chakra-ui/icons"
 import { Container, Stack,VStack,HStack, Box, Button, Text, Center, Heading, Alert, useColorMode, useColorModeValue, List,
     ListItem,Image, Progress } from "@chakra-ui/react"
-import { route } from 'next/dist/server/router';
 import { useRouter } from 'next/router';
 
 function PriceWrapper({ children }) {

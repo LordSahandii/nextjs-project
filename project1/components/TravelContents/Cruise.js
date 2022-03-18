@@ -6,21 +6,17 @@ import {
   HStack,
   Heading,
   Text,
-  VStack,
+
   useColorModeValue,
-  List,
-  ListItem,
-  ListIcon,
+ 
   Button,
-  Container,
-  StackDivider,
+ 
   Input,
   InputGroup,
   InputLeftElement,
   SimpleGrid, Flex,  Menu, MenuButton, MenuItem, MenuList, Grid, MenuDivider, useToast
 } from '@chakra-ui/react';
-import { FaCheckCircle } from 'react-icons/fa';
-import {ArrowBackIcon, ChevronDownIcon, AddIcon, MinusIcon} from "@chakra-ui/icons"
+import {ChevronDownIcon, AddIcon, MinusIcon} from "@chakra-ui/icons"
 import {BiMap} from "react-icons/bi"
 
 const Cruise = () => {

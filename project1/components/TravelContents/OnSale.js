@@ -82,6 +82,7 @@ function ContentTravel({ children }) {
 export default function OnSale() {
     const [index2, setIndex2] = useState(0);
     const route = useRouter();
+    // const ref = React.createRef();
     
     const [index, setIndex] = useState("value")
   return (
