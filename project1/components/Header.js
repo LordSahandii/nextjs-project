@@ -54,14 +54,12 @@ const Header = () => {
                             <MenuItem icon={<CalendarIcon/> } onClick={()=>{router.push("/notbook")}} >
                             Notebook
                             </MenuItem>
-                            <MenuItem icon={<FaMapMarkedAlt></FaMapMarkedAlt>} onClick={handleClick}>
-                            Map
-                            </MenuItem>
+                            
                             <MenuItem icon={<AiFillCar/> } onClick={()=>{router.push("/rent")}}>
                             Rent
                             </MenuItem>
                             <MenuItem icon={<EditIcon></EditIcon> } onClick={()=>{router.push("/aboutUs")}}>
-                            About Us
+                            About Me
                             </MenuItem>
                             
                         </MenuList>

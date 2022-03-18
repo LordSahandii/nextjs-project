@@ -16,7 +16,7 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  SimpleGrid, Flex, Image
+  SimpleGrid, Flex, Image, Hstack
 } from '@chakra-ui/react';
 import { FaCheckCircle } from 'react-icons/fa';
 import {ArrowBackIcon} from "@chakra-ui/icons"
@@ -28,6 +28,8 @@ import Cruise from './Cruise';
 import {FaWpexplorer} from "react-icons/fa"
 import {MdFlight, MdCardTravel} from 'react-icons/md'
 import {RiShip2Line} from "react-icons/ri"
+
+import { useRouter } from 'next/router';
 
 
 function PriceWrapper({ children }) {
@@ -78,6 +80,8 @@ function ContentTravel({ children }) {
   
 
 export default function OnSale() {
+    const [index2, setIndex2] = useState(0);
+    const route = useRouter();
     
     const [index, setIndex] = useState("value")
   return (
@@ -96,11 +100,10 @@ export default function OnSale() {
     </Stack>
       <VStack spacing={2} textAlign="center">
         <Heading as="h1" fontSize="4xl">
-          Plans that fit your need
+          Huge Deals!!!
         </Heading>
         <Text fontSize="lg" color={'gray.500'}>
-          Start with 14-day free trial. No credit card needed. Cancel at
-          anytime.
+          Start booking for Spring and Summer with our best valuable packages. 
         </Text>
       </VStack>
       <Stack
@@ -111,20 +114,19 @@ export default function OnSale() {
         py={10}>
         <PriceWrapper>
           <Box py={4} px={12}>
-            <Text fontWeight="500" fontSize="2xl">
-              Hobby
+            <Text fontWeight="800" fontSize="2xl">
+              Cancun
             </Text>
-            <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
-                $
+            <VStack justifyContent="center">
+                
+              <Text fontSize="3xl" fontWeight="900">
+                $1800
               </Text>
-              <Text fontSize="5xl" fontWeight="900">
-                79
+            
+              <Text fontSize="md" color="gray.500">
+                5 days, 4 nights
               </Text>
-              <Text fontSize="3xl" color="gray.500">
-                /month
-              </Text>
-            </HStack>
+            </VStack>
           </Box>
           <VStack
             bg={useColorModeValue('gray.50', 'gray.700')}
@@ -132,11 +134,11 @@ export default function OnSale() {
             borderBottomRadius={'xl'}>
             <List spacing={3} textAlign="start" px={12}>
               <ListItem>
-                  <Image src='/Cancun.webp'></Image>
+                  <Image src='/Cancun.webp' w={"100%"} height="100%"></Image>
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="teal" variant="outline">
+              <Button w="full" colorScheme="teal" variant="outline" onClick={()=>{route.push('/cancun')}}>
                 Book Now
               </Button>
             </Box>
@@ -147,7 +149,7 @@ export default function OnSale() {
           <Box position="relative">
             <Box
               position="absolute"
-              top="-16px"
+              top="-26px"
               left="50%"
               style={{ transform: 'translate(-50%)' }}>
               <Text
@@ -163,20 +165,19 @@ export default function OnSale() {
               </Text>
             </Box>
             <Box py={4} px={12}>
-              <Text fontWeight="500" fontSize="2xl">
-                Growth
+            <Text fontWeight="800" fontSize="2xl">
+              Santorini
+            </Text>
+            <VStack justifyContent="center">
+                
+              <Text fontSize="3xl" fontWeight="900">
+                $2400
               </Text>
-              <HStack justifyContent="center">
-                <Text fontSize="3xl" fontWeight="600">
-                  $
-                </Text>
-                <Text fontSize="5xl" fontWeight="900">
-                  149
-                </Text>
-                <Text fontSize="3xl" color="gray.500">
-                  /month
-                </Text>
-              </HStack>
+            
+              <Text fontSize="md" color="gray.500">
+                14 days
+              </Text>
+            </VStack>
             </Box>
             <VStack
               bg={useColorModeValue('gray.50', 'gray.700')}
@@ -184,11 +185,11 @@ export default function OnSale() {
               borderBottomRadius={'xl'}>
               <List spacing={3} textAlign="start" px={12}>
               <ListItem>
-                  <Image src='/Santorini.jpeg'></Image>
+                  <Image src='/Santorini.jpeg' w={"100%"} height="100%"></Image>
               </ListItem>
               </List>
               <Box w="80%" pt={7}>
-                <Button w="full" colorScheme="teal">
+                <Button w="full" colorScheme="teal" onClick={()=>{route.push('/santorini')}}>
                   Book Now
                 </Button>
               </Box>
@@ -197,20 +198,19 @@ export default function OnSale() {
         </PriceWrapper>
         <PriceWrapper >
           <Box py={4} px={12}>
-            <Text fontWeight="500" fontSize="2xl">
-              Scale
+            <Text fontWeight="800" fontSize="2xl">
+              Paris
             </Text>
-            <HStack justifyContent="center">
-              <Text fontSize="3xl" fontWeight="600">
-                $
+            <VStack justifyContent="center">
+                
+              <Text fontSize="3xl" fontWeight="900">
+                $3000
               </Text>
-              <Text fontSize="5xl" fontWeight="900">
-                349
+            
+              <Text fontSize="md" color="gray.500">
+                10 days
               </Text>
-              <Text fontSize="3xl" color="gray.500">
-                /month
-              </Text>
-            </HStack>
+            </VStack>
           </Box>
           <VStack
             bg={useColorModeValue('gray.50', 'gray.700')}
@@ -219,12 +219,12 @@ export default function OnSale() {
             >
             <List spacing={3} textAlign="start" px={12}>
             <ListItem>
-                  <Image src='/Paris.jpeg' ></Image>
+                  <Image src='/Paris.jpeg' w={"100%"} height="100%"></Image>
               </ListItem>
             </List>
             <Box w="80%" pt={7}>
-              <Button w="full" colorScheme="red" variant="outline">
-                Start trial
+              <Button w="full" colorScheme="teal" variant="outline" onClick={()=>{route.push('/paris')}}>
+                Book Now
               </Button>
             </Box>
           </VStack>

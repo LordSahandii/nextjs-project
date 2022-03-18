@@ -63,20 +63,17 @@ import { useRouter } from 'next/router';
             }}
           />
           <Heading fontSize={'2xl'} fontFamily={'body'}>
-            Lindsey James
+            Jesse Parker
           </Heading>
           <Text fontWeight={600} color={'gray.500'} mb={4}>
-            @lindsey_jam3s
+            @jesse_park
           </Text>
           <Text
             textAlign={'center'}
             color={useColorModeValue('gray.700', 'gray.400')}
             px={3}>
-            Actress, musician, songwriter and artist. PM for work inquires or{' '}
-            <Link href={'#'} color={'blue.400'}>
-              #tag
-            </Link>{' '}
-            me in your posts
+            CyberSecurity Specialist, I work at Fcorp organization. For more security for your Alexa DM me.
+            
           </Text>
   
           <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
@@ -85,14 +82,14 @@ import { useRouter } from 'next/router';
               py={1}
               bg={useColorModeValue('gray.50', 'gray.800')}
               fontWeight={'400'}>
-              200 Followers
+              1.5k Followers
             </Badge>
             <Badge
               px={2}
               py={1}
               bg={useColorModeValue('gray.50', 'gray.800')}
               fontWeight={'400'}>
-              155 Followings
+              200 Followings
             </Badge>
             <Badge
               px={2}

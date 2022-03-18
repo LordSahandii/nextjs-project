@@ -24,7 +24,7 @@ const rent = () => {
             <VStack spacing={5} p={10} w="full" h="full" justifyContent="center" alignItems="center">
                 
                 <HStack spacing={15}>
-                    <Image  src="/taxi.png" boxSize='150px' borderRadius="full" onClick={()=>{route.push("/taxi")}} ></Image>
+                    <Image  src="/taxi.png" boxSize='150px' borderRadius="full" onClick={()=>{route.push("/taxi")}}></Image>
                     
                     <Image src="/bus2.jpeg" boxSize='150px' borderRadius="full" onClick={()=>{route.push("/bus")}}></Image>
                 </HStack>

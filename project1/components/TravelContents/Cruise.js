@@ -17,7 +17,7 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  SimpleGrid, Flex,  Menu, MenuButton, MenuItem, MenuList, Grid, MenuDivider
+  SimpleGrid, Flex,  Menu, MenuButton, MenuItem, MenuList, Grid, MenuDivider, useToast
 } from '@chakra-ui/react';
 import { FaCheckCircle } from 'react-icons/fa';
 import {ArrowBackIcon, ChevronDownIcon, AddIcon, MinusIcon} from "@chakra-ui/icons"
@@ -27,6 +27,7 @@ const Cruise = () => {
     const[i,setI] = useState(0);
     const[j,setJ] = useState(0);
     const[k,setK] = useState(0);
+    const toast = useToast();
   return (
     <Stack spacing={7}
           
@@ -92,7 +93,13 @@ const Cruise = () => {
           </InputGroup>
          
            </SimpleGrid>
-           <Button colorScheme="teal" >Search</Button>
+           <Button colorScheme="teal" onClick={()=>{toast({
+          title: 'Found!!!',
+          description: "We've found the best deal for you",
+          status: 'success',
+          duration: 2000,
+          isClosable: true,
+        })}}>Search</Button>
         
         
     </Stack>

@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react';
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
+import { FcAssistant, FcDonate, FcInTransit,FcGraduationCap,FcDebt,FcGlobe } from 'react-icons/fc';
 
 
 
@@ -29,24 +29,24 @@ export default function Features() {
     <Box p={4}>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
-          icon={<Icon as={FcAssistant} w={10} h={10} />}
-          title={'Lifetime Support'}
+          icon={<Icon as={FcGlobe} w={10} h={10} />}
+          title={'Travel Easy'}
           text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+            'Experience your best travel with us. Find the best deals with us.'
           }
         />
         <Feature
-          icon={<Icon as={FcDonate} w={10} h={10} />}
-          title={'Unlimited Donations'}
+          icon={<Icon as={FcGraduationCap} w={10} h={10} />}
+          title={'Grudate Students'}
           text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+            'Find the best deals for gradute students. Take your gap year as soon as possible, go have fun.'
           }
         />
         <Feature
-          icon={<Icon as={FcInTransit} w={10} h={10} />}
-          title={'Instant Delivery'}
+          icon={<Icon as={FcDebt} w={10} h={10} />}
+          title={'Pay only for yourself'}
           text={
-            'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore...'
+            'With the new system design, you dont need to pay for others'
           }
         />
       </SimpleGrid>

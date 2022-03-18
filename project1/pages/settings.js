@@ -36,7 +36,7 @@ const settings = () => {
                 
                 <Stack spacing={8} centerContent>
                 <Stack spacing={10} direction="row">
-                <Button as={ArrowBackIcon} onClick={()=>{router.push("/")}}></Button>
+                <Button as={ArrowBackIcon} variant="ghost" onClick={()=>{router.push("/")}}></Button>
                 <Heading alignItems="end">Settings</Heading>
                 </Stack>
                 
@@ -46,19 +46,20 @@ const settings = () => {
                 
 
                 <VStack spacing={10} >
+                        
+                        <Button colorScheme={"teal"} > Change Profile </Button>
                     
-                        <Button> TODO </Button>
                     
-                    
-                        <Button> TODO </Button>
+                        <Button colorScheme={"teal"}> Manage friends </Button>
                    
                 
-                        <Button> TODO </Button>
+                        <Button colorScheme={"teal"}>    Payments    </Button>
                     
              
-                        <Button> TODO </Button>
+                        <Button colorScheme={"yellow"}>   Security    </Button>
                     
                         <Delete></Delete>
+                        
                 
                 </VStack>
                 </Stack>

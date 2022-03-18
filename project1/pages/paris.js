@@ -16,12 +16,18 @@ import {
     List,
     ListItem,
   } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
   import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { MdLocalShipping } from 'react-icons/md';
+  import {ArrowBackIcon} from "@chakra-ui/icons"
   
-  export default function Booking() {
+  export default function Paris() {
+      const route = useRouter();
     return (
-      <Container maxW={'7xl'}>
+        
+        <Container maxW={'7xl'}>
+            <Button as={ArrowBackIcon} variant="ghost" onClick={()=>{route.push("/")}}/>
+        
         
         <SimpleGrid
           columns={{ base: 1, lg: 1 }}
@@ -32,7 +38,7 @@ import {
               rounded={'md'}
               alt={'product image'}
               src={
-                'https://images.unsplash.com/photo-1596516109370-29001ec8ec36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODE1MDl8MHwxfGFsbHx8fHx8fHx8fDE2Mzg5MzY2MzE&ixlib=rb-1.2.1&q=80&w=1080'
+                  '/Paris.jpeg'
               }
               fit={'cover'}
               align={'center'}
@@ -46,13 +52,13 @@ import {
                 lineHeight={1.1}
                 fontWeight={600}
                 fontSize={{ base: '2xl', sm: '4xl', lg: '5xl' }}>
-                Automatic Watch
+                Paris
               </Heading>
               <Text
                 color={useColorModeValue('gray.900', 'gray.400')}
                 fontWeight={300}
                 fontSize={'2xl'}>
-                $350.00 USD
+                $3000
               </Text>
             </Box>
   
@@ -69,93 +75,61 @@ import {
                   color={useColorModeValue('gray.500', 'gray.400')}
                   fontSize={'2xl'}
                   fontWeight={'300'}>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore
+                  Paris (nicknamed the "City of light") is the capital city of France, and the largest city in France.
                 </Text>
                 <Text fontSize={'lg'}>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                  aliquid amet at delectus doloribus dolorum expedita hic, ipsum
-                  maxime modi nam officiis porro, quae, quisquam quos
-                  reprehenderit velit? Natus, totam.
+                    Skip the line to the Louvre muesuem
                 </Text>
               </VStack>
               <Box>
                 <Text
                   fontSize={{ base: '16px', lg: '18px' }}
-                  color={useColorModeValue('yellow.500', 'yellow.300')}
+                  color={useColorModeValue('teal.400', 'teal.300')}
                   fontWeight={'500'}
                   textTransform={'uppercase'}
                   mb={'4'}>
-                  Features
+                  Popular
                 </Text>
   
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
                   <List spacing={2}>
-                    <ListItem>Chronograph</ListItem>
-                    <ListItem>Master Chronometer Certified</ListItem>{' '}
-                    <ListItem>Tachymeter</ListItem>
+                    <ListItem>Tour around the Paris</ListItem>
+                    <ListItem>Eiffel Tower</ListItem>{' '}
+                    <ListItem>Louvre Muesuem</ListItem>
                   </List>
-                  <List spacing={2}>
-                    <ListItem>Anti‑magnetic</ListItem>
-                    <ListItem>Chronometer</ListItem>
-                    <ListItem>Small seconds</ListItem>
-                  </List>
+                  
                 </SimpleGrid>
               </Box>
               <Box>
                 <Text
                   fontSize={{ base: '16px', lg: '18px' }}
-                  color={useColorModeValue('yellow.500', 'yellow.300')}
+                  color={useColorModeValue('teal.500', 'teal.300')}
                   fontWeight={'500'}
                   textTransform={'uppercase'}
                   mb={'4'}>
-                  Product Details
+                  Events
                 </Text>
   
                 <List spacing={2}>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
-                      Between lugs:
+                      Disney Land Tour
                     </Text>{' '}
-                    20 mm
                   </ListItem>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
-                      Bracelet:
+                      Hop on Hop off Bus
                     </Text>{' '}
-                    leather strap
+                 
                   </ListItem>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
-                      Case:
+                      The Moulin show  
                     </Text>{' '}
-                    Steel
+                   
                   </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                      Case diameter:
-                    </Text>{' '}
-                    42 mm
-                  </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                      Dial color:
-                    </Text>{' '}
-                    Black
-                  </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                      Crystal:
-                    </Text>{' '}
-                    Domed, scratch‑resistant sapphire crystal with anti‑reflective
-                    treatment inside
-                  </ListItem>
-                  <ListItem>
-                    <Text as={'span'} fontWeight={'bold'}>
-                      Water resistance:
-                    </Text>{' '}
-                    5 bar (50 metres / 167 feet){' '}
-                  </ListItem>
+                 
+                  
                 </List>
               </Box>
             </Stack>
@@ -172,14 +146,12 @@ import {
               _hover={{
                 transform: 'translateY(2px)',
                 boxShadow: 'lg',
-              }}>
-              Add to cart
+              }}
+              onClick={()=>{route.push("/transaction")}}>
+              Book Now
             </Button>
   
-            <Stack direction="row" alignItems="center" justifyContent={'center'}>
-              <MdLocalShipping />
-              <Text>2-3 business days delivery</Text>
-            </Stack>
+            
           </Stack>
         </SimpleGrid>
       </Container>

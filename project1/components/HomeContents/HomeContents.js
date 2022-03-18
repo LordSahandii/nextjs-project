@@ -13,7 +13,7 @@ const HomeContents = () => {
   return (
     <>
         <VStack w="full" h="full" p={0} spacing={8} justifyContent="left">
-            <Heading display={"flex"} justifyContent="center" alignItems={"center"} size={"md"} fontStyle='oblique'>Travel Anywhere, Anytime</Heading>
+            <Heading display={"flex"} justifyContent="center" alignItems={"center"} size={"md"} fontStyle='oblique'>Travel Anywhere, Any Season</Heading>
             <HomePageCarousel></HomePageCarousel>
             <BackgroundImg></BackgroundImg>
             <Features></Features>
