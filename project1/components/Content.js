@@ -2,7 +2,7 @@ import { Box, Container, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
-import Map from "../pages/map";
+
 import HomeContents from "./HomeContents/HomeContents";
 import Profile from "../pages/profile";
 import ChatBox from "./ChatBoxContents/ChatBox";
