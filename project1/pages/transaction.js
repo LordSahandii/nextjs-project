@@ -20,7 +20,7 @@ function PriceWrapper({ children }) {
     );
   }
 
-const transaction = () => {
+const Transaction = () => {
     const route = useRouter();
   return (
     <Container p={10} maxW="container.xxl" >
@@ -76,4 +76,4 @@ const transaction = () => {
   )
 }
 
-export default transaction
+export default Transaction

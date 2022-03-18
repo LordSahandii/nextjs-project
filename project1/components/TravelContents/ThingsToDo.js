@@ -27,6 +27,7 @@ const ThingsToDo = () => {
     const [i,setI] = useState(0);
     const[j,setJ] = useState(0);
     const[k,setK] = useState(0);
+    const children = <BiMap color='gray.300'/>
     const toast = useToast();
     
   return (
@@ -48,11 +49,7 @@ const ThingsToDo = () => {
             
            <HStack>
            <InputGroup>
-            <InputLeftElement
-              pointerEvents='none'
-              
-              children={<BiMap color='gray.300'/>}
-            />
+            <InputLeftElement>{children}</InputLeftElement>
             <Input type='text' placeholder='Things to do in' />
           </InputGroup>
           

@@ -4,8 +4,11 @@ import {BiMap} from "react-icons/bi"
 import React from 'react'
 import { useRouter } from 'next/router'
 
-const taxi = () => {
+
+const Taxi = () => {
+
   const route = useRouter()
+  const children = <BiMap color='gray.300'/>
   return (
     <Container p={5} maxW="container.xxl">
       
@@ -26,19 +29,12 @@ const taxi = () => {
             
            <HStack>
            <InputGroup>
-            <InputLeftElement
-              pointerEvents='none'
-              
-              children={<BiMap color='gray.300'/>}
-            />
+            
+            <InputLeftElement>{children}</InputLeftElement>
             <Input type='text' placeholder='PickUp' />
           </InputGroup>
           <InputGroup>
-            <InputLeftElement
-              pointerEvents='none'
-              
-              children={<BiMap color='gray.300'/>}
-            />
+          <InputLeftElement>{children}</InputLeftElement>
             <Input type='text' placeholder='DropOff' />
           </InputGroup>
           
@@ -80,4 +76,4 @@ const taxi = () => {
   )
 }
 
-export default taxi
+export default Taxi

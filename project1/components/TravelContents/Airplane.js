@@ -23,6 +23,7 @@ const Airplane = () => {
     const[j,setJ] = useState(0);
     const[k,setK] = useState(0);
     const[types,setTypes] = useState("Economy");
+    const children = <BiMap color='gray.300'/>
   return (
     <Stack spacing={7}
           
@@ -76,21 +77,11 @@ const Airplane = () => {
             
            <HStack>
            <InputGroup>
-            <InputLeftElement
-              pointerEvents='none'
-              
-              children={<BiMap color='gray.300'/>}
-            />
+           <InputLeftElement>{children}</InputLeftElement>
             <Input type='text' placeholder='Leaving From' />
           </InputGroup>
            <InputGroup>
-            <InputLeftElement
-              pointerEvents='none'
-              
-              
-              children={<BiMap color='gray.300'/>}
-              
-            />
+            <InputLeftElement>{children}</InputLeftElement>
             <Input type='text' placeholder='Going to' />
           </InputGroup>
           

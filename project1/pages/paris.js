@@ -75,7 +75,7 @@ import { useRouter } from 'next/router';
                   color={useColorModeValue('gray.500', 'gray.400')}
                   fontSize={'2xl'}
                   fontWeight={'300'}>
-                  Paris (nicknamed the "City of light") is the capital city of France, and the largest city in France.
+                  Paris nicknamed the City of light is the capital city of France, and the largest city in France.
                 </Text>
                 <Text fontSize={'lg'}>
                     Skip the line to the Louvre muesuem
@@ -114,18 +114,18 @@ import { useRouter } from 'next/router';
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                       Disney Land Tour
-                    </Text>{' '}
+                    </Text>
                   </ListItem>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                       Hop on Hop off Bus
-                    </Text>{' '}
+                    </Text>
                  
                   </ListItem>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                       The Moulin show  
-                    </Text>{' '}
+                    </Text>
                    
                   </ListItem>
                  

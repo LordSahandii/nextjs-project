@@ -16,6 +16,8 @@ import {
   } from '@chakra-ui/react';
   import {ArrowBackIcon} from "@chakra-ui/icons"
 import { useRouter } from 'next/router';
+import React from 'react';
+  
   
   export default function Cancun() {
       const route = useRouter();
@@ -69,7 +71,7 @@ import { useRouter } from 'next/router';
                   color={useColorModeValue('gray.500', 'gray.400')}
                   fontSize={'2xl'}
                   fontWeight={'300'}>
-                  The city is on the Caribbean Sea and is one of Mexico's easternmost points.
+                  The city is on the Caribbean Sea and is one of Mexicos easternmost points.
                 </Text>
                 <Text fontSize={'lg'}>
                     Stay at the famous resort of Cancun and enjoy the beach and sunset.
@@ -108,18 +110,18 @@ import { useRouter } from 'next/router';
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                       Dance on the beach
-                    </Text>{' '}
+                    </Text>
                   </ListItem>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                       Open Bar 24/7
-                    </Text>{' '}
+                    </Text>
                  
                   </ListItem>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                       Spanish live music 
-                    </Text>{' '}
+                    </Text>
                    
                   </ListItem>
                  

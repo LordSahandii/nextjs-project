@@ -20,6 +20,8 @@ import {
   import { MdLocalShipping } from 'react-icons/md';
   import {ArrowBackIcon} from "@chakra-ui/icons"
 import { useRouter } from 'next/router';
+import React from 'react';
+  
   
   export default function Santorini() {
       const route = useRouter();
@@ -113,18 +115,18 @@ import { useRouter } from 'next/router';
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                       Santorini red sunset cruise
-                    </Text>{' '}
+                    </Text>
                   </ListItem>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                       Sailing with barbeque
-                    </Text>{' '}
+                    </Text>
                  
                   </ListItem>
                   <ListItem>
                     <Text as={'span'} fontWeight={'bold'}>
                       Oia sunset tour
-                    </Text>{' '}
+                    </Text>
                    
                   </ListItem>
                  

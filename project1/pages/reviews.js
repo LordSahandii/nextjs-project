@@ -4,7 +4,7 @@ import {ArrowBackIcon, StarIcon} from "@chakra-ui/icons"
 import { useRouter } from 'next/router'
 
 
-const reviews = () => {
+const Reviews = () => {
     const route = useRouter();
   return (
       
@@ -33,4 +33,4 @@ const reviews = () => {
   )
 }
 
-export default reviews
+export default Reviews

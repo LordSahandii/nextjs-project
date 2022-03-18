@@ -1,4 +1,4 @@
-import { Box, ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { Box, ChakraProvider, extendTheme, Container } from "@chakra-ui/react";
 import { AddIcon, BellIcon, EditIcon, ChatIcon, Search2Icon } from "@chakra-ui/icons";
 import {useState} from "react";
 import { render } from "react-dom";
@@ -9,11 +9,48 @@ import {
   BottomNavigationLabel,
   BottomNavigationStyleConfig
 } from "chakra-ui-bottom-navigation";
-import { Content } from "./content";
+
 import { Icon } from "@chakra-ui/react";
 import {MdSettings, MdHome} from 'react-icons/md'
 import {GiCommercialAirplane} from 'react-icons/gi'
 
+import React from "react";
+
+import HomeContents from "./HomeContents/HomeContents";
+import Profile from "../pages/profile";
+import ChatBox from "./ChatBoxContents/ChatBox";
+import OnSale from "./TravelContents/OnSale";
+
+function Content({ children }) {
+  return (
+    <Container p={0} maxW="container.xxl" >
+      {children === 0 && (
+        <>
+          <OnSale></OnSale>
+          
+        </>
+      )}
+      {children === "value" && (
+        <>
+          <HomeContents></HomeContents>
+          
+        </>
+      )}
+      {children === 2 && (
+        <>
+          <ChatBox/>
+        </>
+      )}
+      {children === 3 && (
+        <>
+        
+          <Profile></Profile>
+          
+        </>
+      )}
+    </Container>
+  );
+}
 
 export default function BottomNav() {
   const [index, setIndex] = useState("value");
@@ -22,7 +59,7 @@ export default function BottomNav() {
 
   return (
     <Box p={10} py={20} >
-      <Content children={index} />
+      <Content>{index}</Content>
 
       <BottomNavigation
         value={index}

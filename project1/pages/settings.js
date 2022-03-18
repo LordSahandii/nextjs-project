@@ -5,45 +5,17 @@ import { useRouter } from 'next/router'
 import Delete from '../components/Delete'
 
 
-const settings = () => {
+const Settings = () => {
     const router = useRouter();
   return (
       
     <Container maxW="container.xxl" padding={10} centerContent >
-                {/* <VStack  spacing={8} >
-                <Stack spacing={8} direction="row">
-                <Button as={ArrowBackIcon} onClick={()=>{router.push("/")}}></Button>
-                <Heading>Settings</Heading>
-                </Stack>
-                
-                
-                    <Box>
-                        <Button> TODO </Button>
-                    </Box>
-                    <Box>
-                        <Button> TODO </Button>
-                    </Box>
-                    <Box>
-                        <Button> TODO </Button>
-                    </Box>
-                    <Box>
-                        <Button> TODO </Button>
-                    </Box>
-                    <Box>
-                        <Button> TODO </Button>
-                    </Box>
-                </VStack> */}
                 
                 <Stack spacing={8} centerContent>
                 <Stack spacing={10} direction="row">
                 <Button as={ArrowBackIcon} variant="ghost" onClick={()=>{router.push("/")}}></Button>
                 <Heading alignItems="end">Settings</Heading>
                 </Stack>
-                
-                
-
-
-                
 
                 <VStack spacing={10} >
                         
@@ -72,4 +44,4 @@ const settings = () => {
   )
 }
 
-export default settings
+export default Settings

@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactNode, useState } from 'react';
 import {
   Box,
@@ -95,7 +96,7 @@ export default function OnSale() {
             <Button as={RiShip2Line} variant="ghost" onClick={()=>{setIndex(3)}}></Button>
         </Flex>
 
-        <ContentTravel children={index}></ContentTravel>
+        <ContentTravel >{index}</ContentTravel>
 
     
     </Stack>

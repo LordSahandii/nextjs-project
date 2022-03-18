@@ -19,6 +19,8 @@ import {
   } from '@chakra-ui/react';
   import {ArrowRightIcon, ArrowBackIcon} from "@chakra-ui/icons"
 import { useState } from 'react';
+import React from 'react';
+  
   
   export default function Profile() {
 

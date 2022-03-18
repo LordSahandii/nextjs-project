@@ -3,7 +3,7 @@ import {ArrowBackIcon} from "@chakra-ui/icons"
 import React from 'react'
 import { useRouter } from 'next/router'
 
-const rent = () => {
+const Rent = () => {
     const route = useRouter();
   return (
     <>
@@ -41,4 +41,4 @@ const rent = () => {
   )
 }
 
-export default rent
+export default Rent

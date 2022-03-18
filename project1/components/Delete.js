@@ -34,7 +34,7 @@ export default function Delete() {
               </AlertDialogHeader>
   
               <AlertDialogBody>
-                Are you sure? You can't undo this action afterwards.
+                Are you sure? You cant undo this action afterwards.
               </AlertDialogBody>
   
               <AlertDialogFooter>

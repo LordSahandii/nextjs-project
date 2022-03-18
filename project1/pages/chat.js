@@ -3,6 +3,7 @@ import { ArrowBackIcon } from '@chakra-ui/icons'
 import {FiSend} from "react-icons/fi"
 import React from 'react'
 import { useRouter } from 'next/router'
+  
 
 const Chat = () => {
   const route = useRouter();
@@ -93,7 +94,7 @@ const Chat = () => {
             
           />
           <Stack direction="row" spacing={4} float="left">
-              <Text >Hey, I'm doing great. what about you? I like your picture too</Text>
+              <Text >Hey, Im doing great. what about you? I like your picture too</Text>
            
             </Stack>
          

@@ -23,6 +23,7 @@ const Cruise = () => {
     const[i,setI] = useState(0);
     const[j,setJ] = useState(0);
     const[k,setK] = useState(0);
+    const children = <BiMap color='gray.300'/>
     const toast = useToast();
   return (
     <Stack spacing={7}
@@ -67,11 +68,8 @@ const Cruise = () => {
             
            <HStack>
            <InputGroup>
-            <InputLeftElement
-              pointerEvents='none'
-              
-              children={<BiMap color='gray.300'/>}
-            />
+            
+            <InputLeftElement>{children}</InputLeftElement>
             <Input type='text' placeholder='Going to' />
           </InputGroup>
           

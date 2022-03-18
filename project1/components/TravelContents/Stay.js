@@ -23,6 +23,7 @@ const Stay = () => {
     const [i,setI] = useState(0);
     const[j,setJ] = useState(0);
     const[k,setK] = useState(0);
+    const children = <BiMap color='gray.300'/>
     const[room,setRoom] = useState(0);
   return (
     <Stack spacing={7}
@@ -78,11 +79,7 @@ const Stay = () => {
             
            <HStack>
            <InputGroup>
-            <InputRightElement
-              pointerEvents='none'
-              
-              children={<BiMap color='gray.300'/>}
-            />
+            <InputRightElement>{children}</InputRightElement>
             <Input type='text' placeholder='Going to' />
           </InputGroup>
           

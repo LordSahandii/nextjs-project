@@ -1,6 +1,7 @@
 import { Button, HStack, Input, useToast } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid';
+import React from 'react';
 
 function AddNotes({ addTodo }) {
   const toast = useToast();

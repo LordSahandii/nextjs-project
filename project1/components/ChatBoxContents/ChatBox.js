@@ -9,6 +9,8 @@ import {
     HStack,
   } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
+import React from 'react';
+  
   
   export default function ChatBox() {
       const route = useRouter();
